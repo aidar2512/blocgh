@@ -5,9 +5,9 @@ function TaskList() {
   const { tasks } = useTaskContext();
 
   return (
-    <ul>
-      {tasks.map((t, index) => (
-        <TaskItem key={index} task={t} />
+    <ul className="task-list">
+      {tasks.map((task, index) => (
+        <TaskItem key={index} task={task} index={index} />
       ))}
     </ul>
   );

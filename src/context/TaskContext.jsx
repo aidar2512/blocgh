@@ -9,8 +9,12 @@ export function TaskProvider({ children }) {
     if (task.trim()) setTasks((prev) => [...prev, task]);
   };
 
+  const deleteTask = (index) => {
+    setTasks((prev) => prev.filter((_, i) => i !== index));
+  };
+
   return (
-    <TaskContext.Provider value={{ tasks, addTask }}>
+    <TaskContext.Provider value={{ tasks, addTask, deleteTask }}>
       {children}
     </TaskContext.Provider>
   );

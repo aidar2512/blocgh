@@ -11,7 +11,7 @@ function AddTask() {
   };
 
   return (
-    <div>
+    <div className="add-task">
       <input
         type="text"
         value={task}
